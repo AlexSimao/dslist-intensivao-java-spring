@@ -13,10 +13,10 @@ import com.alexsimao.dslist.repositories.GameRepository;
 public class GameAllService {
 
   @Autowired
-  private GameRepository gameRepository;
+  private GameRepository gameAllRepository;
 
   public List<GameDTO> findAll() {
-    List<Game> result = gameRepository.findAll();
+    List<Game> result = gameAllRepository.findAll();
     var dto = result.stream().map(game -> new GameDTO(game)).toList();
     return dto;
   }
