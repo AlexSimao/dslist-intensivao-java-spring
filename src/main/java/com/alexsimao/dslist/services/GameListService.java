@@ -10,7 +10,7 @@ import com.alexsimao.dslist.entities.GameList;
 import com.alexsimao.dslist.repositories.GameListRepository;
 
 @Service
-public class GameListServise {
+public class GameListService {
 
   @Autowired
   private GameListRepository gameListRepository;
