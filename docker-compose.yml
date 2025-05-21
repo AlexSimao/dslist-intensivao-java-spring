@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234567
+      POSTGRES_DB: dslist
+    ports:
+      - 5433:5432
+    volumes:
+      - ./.data/postgres-data:/var/lib/postgresql/data
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork: 
+    driver: bridge
